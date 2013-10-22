@@ -17,6 +17,7 @@ mkvirtualenv usc --no-site-packages --distribute
 workon usc
 cdvirtualenv
 ```
+Note: Restart might be needed before the command mkvirtualenv be available
 
 Your prompt should now look similar to this:
 ```

@@ -36,12 +36,6 @@ sudo easy_install psycopg2
 
 Once the dependencies have been installed, we now setup the database.
 
-First, create a Linux user called usc.admin:
-```
-sudo adduser uscadmin
-passwd password
-```
-
 Next, create a custom user for your database:
 ```
 sudo -u postgres createuser --superuser $USER

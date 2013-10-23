@@ -8,7 +8,7 @@ First, install all required dependencies:
 ```
 sudo add-apt-repository ppa:chris-lea/node.js
 sudo apt-get update
-sudo apt-get install python-pip python-dev python-setuptools python-imaging build-essential python-virtualenv virtualenvwrapper postgresql postgresql-client pgadmin3 nodejs
+sudo apt-get install python-pip python-dev python-setuptools python-imaging build-essential python-virtualenv virtualenvwrapper postgresql postgresql-client libpq-dev nodejs 
 ```
 
 Then, create our virtual environment:
@@ -28,8 +28,7 @@ Next, from within the virtual environment, we install the following:
 ```
 pip install -U mezzanine
 pip install -U yolk
-sudo apt-get install libpq-dev
-sudo easy_install psycopg2
+pip install psycopg2
 ```
 
 ### Database

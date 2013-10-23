@@ -10,7 +10,7 @@ DATABASES = {
         # DB name or path to database file if using sqlite3.
         "NAME": "usc.website",
         # Not used with sqlite3.
-        "USER": "usc.admin",
+        "USER": "yourusername",
         # Not used with sqlite3.
         "PASSWORD": "password",
         # Set to empty string for localhost. Not used with sqlite3.

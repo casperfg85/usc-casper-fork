@@ -28,6 +28,7 @@ Next, from within the virtual environment, we install the following:
 ```
 pip install -U mezzanine
 pip install -U yolk
+sudo apt-get install libpq-dev
 sudo easy_install psycopg2
 ```
 
@@ -35,22 +36,28 @@ sudo easy_install psycopg2
 
 Once the dependencies have been installed, we now setup the database.
 
-First, create a custom user for your database:
+First, create a Linux user called usc.admin:
 ```
-sudo -u postgres createuser --superuser "usc.admin" 
+sudo adduser uscadmin
+passwd password
+```
+
+Next, create a custom user for your database:
+```
+sudo -u postgres createuser --superuser $USER
 sudo -u postgres psql
 ```
 
 Once you have entered the PostgreSQL REPL, setup the password (use "password" as our password)
 ```
-postgres=# \password "usc.admin"
+postgres=# \password [enter your username here]
 ```
 
 Exit the REPL using by typing ```\q``` .
 
 Let us now create our database:
 ```
-createdb usc.admin
+createdb $USER
 createdb usc.website
 ```
 
@@ -62,6 +69,16 @@ git clone https://github.com/neegool/usc-website.git
 cd usc-website
 ```
 
+Customize the local_settings.py to be compatible for your system. Change the USER part.
+```
+gedit local_settings.py
+```
+
+It should now look something similar to this:
+```
+#Not used with sqlite3.
+"USER": "neil"
+```
 We can now try running our project. First set up our database:
 ```
 python manage.py createdb

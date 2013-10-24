@@ -127,5 +127,4 @@ Finally, setup Guard:
 bundle
 bundle exec guard
 ```
-
-WOLOLOLOLLO
+--END--

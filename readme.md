@@ -127,5 +127,3 @@ Finally, setup Guard:
 bundle
 bundle exec guard
 ```
-
---End--
